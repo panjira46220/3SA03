@@ -24,6 +24,12 @@ class CharacterCard extends React.Component{
             </div>
         )
     }
+    componentDidUpdate(prevProps){
+        if(prevProps.attempt != this.props.attempt){
+        this.setState({active: false})
+        }
+       }
+    
 }
 
 export default CharacterCard;
