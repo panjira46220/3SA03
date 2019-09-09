@@ -3,7 +3,7 @@ import CharacterCard from './CharacterCard';
 import './App.css';
 import _ from 'lodash';
  
-let message = 'Hello'
+let message = 'Ghost'
  
 const prepareStateFromWord = (given_word) => {
   let word = given_word.toUpperCase()
@@ -45,7 +45,7 @@ class App extends React.Component {
             />
           ))
         }
-        <h2>Selected</h2>
+        <h2>หาคำ</h2>
         {
           Array.from(this.state.guess).map((item, index) => (
             <CharacterCard
@@ -55,9 +55,9 @@ class App extends React.Component {
             />
           ))
         }
-        <div>Attemp {this.state.attempt}</div>
+        <div>รอบที่ {this.state.attempt}</div>
         {
-          this.state.completed && <h4>Complete</h4>
+          this.state.completed && <h4>ถูกแล้วค่ะ</h4>
         }
       </div>
     )
